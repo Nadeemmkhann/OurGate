@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="./signup.js"></script>
+    <script type="text/javascript" src="./models/usermodel.js"></script>
+
+    <style>
+      /* .col-8 {
+        border: 2px solid black;
+        background-color: aliceblue;
+      }
+      .col-4 {
+        border: 2px solid black;
+        background-color: aliceblue;
+      } */
+      /* .container{
+            border: 2px solid black;
+            width: 100%;
+        }
+        */
+      hr {
+        width: 50%;
+      }
+      .row {
+        margin-top: 56px;
+      }
+      body {
+        background-color: hsl(205, 68%, 88%);
+        overflow-x: clip;
+      }
+      #nav {
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="gradient-custom" style="margin-top: 55px">
+      <div class="container py-5">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div
+              class="card shadow-2-strong card-registration"
+              style="border-radius: 15px"
+            >
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="firstName"
+                          class="form-control form-control-sm"
+                        />
+                        <label class="form-label" for="firstName"
+                          >First Name
+                          <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="lastName"
+                          class="form-control form-control-sm"
+                        />
+                        <label class="form-label" for="lastName"
+                          >Last Name
+                          <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 mb-4 d-flex align-items-center">
+                      <div class="form-outline datepicker w-100">
+                        <textarea
+                          type="area"
+                          class="form-control form-control-sm"
+                          id="address"
+                        >
+                        </textarea>
+                        <label for="address" class="form-label"
+                          >Address
+                          <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <select id="wing" class="select form-control-sm">
+                        <option value="1" disabled>Select Wing</option>
+                        <option value="A">A wing</option>
+                        <option value="B">B wing</option>
+                        <option value="C">C wing</option>
+                      </select>
+                      <label for="wing" class="form-label select-label"
+                        >Select Wing
+                        <span class="text-danger">*</span>
+                      </label>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <select id="flat" class="select form-control-sm">
+                        <option value="1" disabled>Select Flat No</option>
+                        <option value="101">Flat 101</option>
+                        <option value="102">Flat 102</option>
+                        <option value="103">Flat 103</option>
+                        <option value="104">Flat 104</option>
+                        <option value="201">Flat 201</option>
+                        <option value="202">Flat 202</option>
+                        <option value="203">Flat 203</option>
+                        <option value="204">Flat 204</option>
+                        <option value="301">Flat 301</option>
+                        <option value="302">Flat 302</option>
+                        <option value="303">Flat 303</option>
+                        <option value="304">Flat 304</option>
+                        <option value="401">Flat 401</option>
+                        <option value="402">Flat 402</option>
+                        <option value="403">Flat 403</option>
+                        <option value="404">Flat 404</option>
+                        <option value="501">Flat 501</option>
+                        <option value="502">Flat 502</option>
+                        <option value="503">Flat 503</option>
+                        <option value="504">Flat 504</option>
+                        <option value="601">Flat 601</option>
+                        <option value="602">Flat 602</option>
+                        <option value="603">Flat 603</option>
+                        <option value="604">Flat 604</option>
+                        <option value="701">Flat 701</option>
+                        <option value="702">Flat 702</option>
+                        <option value="703">Flat 703</option>
+                        <option value="704">Flat 704</option>
+                      </select>
+                      <label for="flat" class="form-label select-label"
+                        >Select Flat No
+                        <span class="text-danger">*</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <h6 class="mb-2 pb-1">
+                        Gender:
+                        <span class="text-danger">*</span>
+                      </h6>
+
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="femaleGender"
+                          value="Female"
+                          name="gender"
+                        />
+                        <label class="form-check-label" for="femaleGender"
+                          >Female</label
+                        >
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input
+                          name="gender"
+                          class="form-check-input"
+                          type="radio"
+                          id="maleGender"
+                          value="Male"
+                        />
+                        <label class="form-check-label" for="maleGender"
+                          >Male</label
+                        >
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input
+                          name="gender"
+                          class="form-check-input"
+                          type="radio"
+                          id="otherGender"
+                          value="Other"
+                        />
+                        <label class="form-check-label" for="otherGender"
+                          >Other</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <input
+                          type="number"
+                          id="phoneNumber"
+                          class="form-control form-control-sm"
+                        />
+                        <label class="form-label" for="phoneNumber"
+                          >Mobile Number
+                          <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <input
+                          type="email"
+                          id="emailAddress"
+                          class="form-control form-control-sm"
+                          required
+                        />
+                        <label class="form-label" for="emailAddress"
+                          >Email
+                          <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <input
+                          type="password"
+                          id="password"
+                          class="form-control form-control-sm"
+                          required
+                        />
+                        <label class="form-label" for="password"
+                          >Password
+                          <span class="text-danger">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 pt-2">
+                    <button class="btn btn-primary btn-md" onclick="onSignup()">
+                      Signup
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>

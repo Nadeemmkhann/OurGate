@@ -1,11 +1,13 @@
 function onLogin() {
   var supervisorCheckbox = document.getElementById("supervisorCheckbox");
+  // window.location.assign("http://127.0.0.1:5500/index.html");
   if (supervisorCheckbox.checked) {
     console.log("Authentication......");
+    document.getElementById("loginlink").setAttribute("href", "admin.html");
     //authnecatte API
-    location.assign = "http://127.0.0.1:5500/admin.admin.html?";
-    location.reload();
+    // "https://www.w3schools.com"
+    // location.reload();
   } else {
-    console.log("Npt Checked");
+    console.log("Not Checked");
   }
 }
