@@ -34,7 +34,7 @@ async function onSignup(user) {
 
   //Service call
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://localhost:5000/addUser");
+  xhr.open("POST", "http://localhost:5000/receiver");
 
   xhr.setRequestHeader("Accept", "application/json");
   xhr.setRequestHeader("Content-Type", "application/json");
@@ -54,6 +54,9 @@ async function onSignup(user) {
     body: JSON.stringify(user),
   })
     .then((res) => {
+      res.json().then((fuser) => {
+        alert(JSON.stringify(fuser))
+      })
       if (res.ok) {
         if (
           firstName != "" ||
@@ -63,7 +66,7 @@ async function onSignup(user) {
         ) {
           location.assign("user.html");
         } else {
-          alert("Fill all field");
+          alert(" all fieFillld");
         }
       } else {
         alert("something is wrong");

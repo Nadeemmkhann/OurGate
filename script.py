@@ -19,7 +19,7 @@
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from db import database
+# from db import database
 # Set up Flaskstrong>:
 app = Flask(__name__)
 # Set up Flask to bypass CORSstrong>:
@@ -31,7 +31,7 @@ cors = CORS(app)
 def postME():
     data = request.get_json()
     data = jsonify(data)
-    database(data)
+    # database(data)
     print(data)
     return data
 
