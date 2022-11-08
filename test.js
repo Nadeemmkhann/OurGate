@@ -16,3 +16,7 @@ async function Test() {
   let result = await response.json();
   alert(result.message);
 }
+
+$("#myModal").on("shown.bs.modal", function () {
+  $("#myInput").trigger("focus");
+});

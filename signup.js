@@ -55,8 +55,8 @@ async function onSignup(user) {
   })
     .then((res) => {
       res.json().then((fuser) => {
-        alert(JSON.stringify(fuser))
-      })
+        alert(JSON.stringify(fuser));
+      });
       if (res.ok) {
         if (
           firstName != "" ||

@@ -1,0 +1,23 @@
+{
+    "flat": "A-702",
+    "day": "01",
+    "month": "10",
+    "year": "2022",
+    "dueDay": "01",
+    "dueMonth": "10",
+    "dueYear": "2022",
+    "monthName":"October",
+    "billNo": "1254/2021-2022",
+    "area":"950 qft",
+    "fullName":"Zahid Khan",
+    "propertyTax":1814.00,
+    "sinkingFund": 172.00,
+    "repairFund":515.00,
+    "maintainanceCharges":2000.00,
+    "insauranceCharges":30.00,
+    "twoWheelerCharges":25.00,
+    "fourWheelerCharges":150.00,
+    "total":4706.00,
+    "preOutstanding":0.0,
+    "netPay":4760.00
+}
